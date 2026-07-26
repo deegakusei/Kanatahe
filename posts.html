@@ -6,6 +6,9 @@
   <title>Posts | My Web Site</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="js/common.js" defer></script>
+  <!-- 記事データと一覧生成スクリプトを読み込み -->
+  <script src="js/posts-data.js" defer></script>
+  <script src="js/posts-render.js" defer></script>
 </head>
 <body>
 
@@ -15,25 +18,8 @@
   <main class="container">
     <h1 class="page-title">気になったポストと雑記</h1>
 
-    <div class="post-list">
-      <!-- 最新の記事（新着順） -->
-      <a href="posts/post-02.html" class="post-item-card">
-        <div class="post-item-meta">
-          <span class="post-date">2026.07.26</span>
-        </div>
-        <h2 class="post-item-title">ここに2つ目の記事タイトルが入ります</h2>
-        <p class="post-item-summary">記事の簡単な概要や引用したポストの要約を1〜2行程度で書きます。</p>
-      </a>
-
-      <!-- 過去の記事 -->
-      <a href="posts/post-01.html" class="post-item-card">
-        <div class="post-item-meta">
-          <span class="post-date">2026.07.20</span>
-        </div>
-        <h2 class="post-item-title">ここに1つ目の記事タイトルが入ります</h2>
-        <p class="post-item-summary">ここに記事の簡単な概要を書きます。</p>
-      </a>
-    </div>
+    <!-- JSによってここに自動で記事カードが生成されます -->
+    <div class="post-list" id="post-list-container"></div>
   </main>
 
   <!-- 共通フッター -->
