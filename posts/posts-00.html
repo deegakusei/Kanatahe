@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>記事タイトル | My Web Site</title>
+  <!-- サブフォルダ内からcssやjsを参照するため ../ を付与 -->
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/common.js" defer></script>
+</head>
+<body>
+
+  <!-- 共通ヘッダー -->
+  <header class="header" id="header-include"></header>
+
+  <main class="container">
+    <article class="post-detail">
+      <div class="post-detail-header">
+        <p class="post-date">2026.07.20</p>
+        <h1 class="post-detail-title">ここに1つ目の記事タイトルが入ります</h1>
+      </div>
+
+      <!-- Xの埋め込み -->
+      <div class="x-embed">
+        <!-- コピーしたXの埋め込みコードをここに貼り付け -->
+        <blockquote class="twitter-tweet"><p lang="ja" dir="ltr">（ここにコピーしたコードを貼る）</p></blockquote>
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      </div>
+
+      <!-- 自分のコメント・本文 -->
+      <div class="post-content">
+        <p>ここにポストに対する自分の意見や感想をあれこれ書きます。</p>
+        <p>段落を分ける場合は <p> タグで囲んで記述します。</p>
+      </div>
+
+      <!-- 一覧に戻るボタン -->
+      <div class="back-link-box">
+        <a href="../posts.html" class="btn-secondary">← 一覧に戻る</a>
+      </div>
+    </article>
+  </main>
+
+  <!-- 共通フッター -->
+  <footer id="footer-include"></footer>
+
+</body>
+</html>
