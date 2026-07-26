@@ -5,6 +5,6 @@ const postsData = [
     title: "テストタイトル",
     date: "2026-07-20",
     summary: "これは動作確認用のテスト記事です。",
-    url: "posts/posts-00.html"
+    url: "posts/post-00.html"
   }
 ];
