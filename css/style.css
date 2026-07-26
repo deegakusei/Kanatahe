@@ -84,46 +84,30 @@ body {
 /* ボタンを並べるボックス */
 .cta-box {
   display: flex;
-  flex-direction: column; /* スマホ表示などで縦並び */
-  gap: 12px;             /* ボタン同士の間隔 */
+  flex-direction: column;
+  gap: 12px;
   align-items: center;
 }
 
-/* メインボタン (Links) */
-.btn-primary {
+/* メインボタン・サブボタン（色・スタイルを統一） */
+.btn-primary,
+.btn-secondary {
   display: block;
   width: 100%;
   max-width: 320px;
   padding: 14px 20px;
   background-color: #2563eb;
   color: #ffffff;
+  border: none;
   text-decoration: none;
   font-weight: bold;
   border-radius: 8px;
   transition: background-color 0.2s;
 }
 
-.btn-primary:hover {
-  background-color: #1d4ed8;
-}
-
-/* サブボタン (Posts) */
-.btn-secondary {
-  display: block;
-  width: 100%;
-  max-width: 320px;
-  padding: 14px 20px;
-  background-color: #ffffff;
-  color: #2563eb;
-  border: 2px solid #2563eb;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.2s, color 0.2s;
-}
-
+.btn-primary:hover,
 .btn-secondary:hover {
-  background-color: #2563eb;
+  background-color: #1d4ed8;
   color: #ffffff;
 }
 
@@ -189,52 +173,7 @@ footer {
   color: #999;
 }
 
-/* 記事ページ（posts.html）用のスタイル */
-.page-title {
-  font-size: 1.5rem;
-  margin-bottom: 24px;
-}
-
-.post-card {
-  background-color: #ffffff;
-  border-radius: 12px;
-  padding: 24px;
-  margin-bottom: 32px;
-  text-align: left; /* 文章を左揃えにする */
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-}
-
-.post-title {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.post-date {
-  font-size: 0.8rem;
-  color: #888;
-  margin-bottom: 16px;
-}
-
-/* Xの埋め込み用枠調整 */
-.x-embed {
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center; /* ポストを中央に寄せる */
-}
-
-/* 自分のコメント領域 */
-.post-comment {
-  border-top: 1px solid #eee;
-  padding-top: 16px;
-  line-height: 1.6;
-  color: #333;
-}
-
-.post-comment p {
-  margin-bottom: 12px;
-}
-
-/* 記事一覧（posts.html）用 */
+/* 記事一覧・記事ページ共通スタイル */
 .page-title {
   font-size: 1.5rem;
   margin-bottom: 24px;
@@ -270,6 +209,7 @@ footer {
 .post-date {
   font-size: 0.8rem;
   color: #888;
+  margin-bottom: 16px;
 }
 
 .post-item-title {
