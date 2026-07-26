@@ -81,9 +81,20 @@ body {
   margin-bottom: 32px;
 }
 
+/* ボタンを並べるボックス */
+.cta-box {
+  display: flex;
+  flex-direction: column; /* スマホ表示などで縦並び */
+  gap: 12px;             /* ボタン同士の間隔 */
+  align-items: center;
+}
+
+/* メインボタン (Links) */
 .btn-primary {
-  display: inline-block;
-  padding: 14px 24px;
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 20px;
   background-color: #2563eb;
   color: #ffffff;
   text-decoration: none;
@@ -94,6 +105,26 @@ body {
 
 .btn-primary:hover {
   background-color: #1d4ed8;
+}
+
+/* サブボタン (Posts) */
+.btn-secondary {
+  display: block;
+  width: 100%;
+  max-width: 320px;
+  padding: 14px 20px;
+  background-color: #ffffff;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #2563eb;
+  color: #ffffff;
 }
 
 /* リンク集（profile & links）用 */
