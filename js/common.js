@@ -11,7 +11,20 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!response.ok) throw new Error("Header file not found");
         return response.text();
       })
-      .then(data => { headerElem.innerHTML = data; })
+      .then(data => {
+        headerElem.innerHTML = data;
+
+        // サブフォルダ(/posts/)にいる場合、ヘッダー内のリンク先を1つ上に補正する
+        if (isInSubDir) {
+          headerElem.querySelectorAll("a").forEach(a => {
+            const href = a.getAttribute("href");
+            // 外部リンクやページ内リンク以外に "../" を付与
+            if (href && !href.startsWith("http") && !href.startsWith("#")) {
+              a.setAttribute("href", "../" + href);
+            }
+          });
+        }
+      })
       .catch(err => console.error("Header loading error:", err));
   }
 
@@ -21,9 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(basePath + "footer.html")
       .then(response => {
         if (!response.ok) throw new Error("Footer file not found");
-        return responsetext();
+        return response.text();
       })
-      .then(data => { footerElem.innerHTML = data; })
+      .then(data => {
+        footerElem.innerHTML = data;
+      })
       .catch(err => console.error("Footer loading error:", err));
   }
 });
