@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(basePath + "footer.html")
       .then(response => {
         if (!response.ok) throw new Error("Footer file not found");
-        return responsetext();
+        return response.text();
       })
       .then(data => { footerElem.innerHTML = data; })
       .catch(err => console.error("Footer loading error:", err));
