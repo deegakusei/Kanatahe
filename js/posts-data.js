@@ -9,7 +9,7 @@ const postsData = [
   },
   {
     id: "post-00",
-    title: "テスト記事（post-00）",
+    title: "テストタイトル",
     date: "2026.07.20",
     summary: "これは動作確認用のテスト記事です。",
     url: "posts/post-00.html"
