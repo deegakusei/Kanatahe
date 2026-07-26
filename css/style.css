@@ -89,7 +89,7 @@ body {
   align-items: center;
 }
 
-/* メインボタン・サブボタン（色・スタイルを統一） */
+/* メインボタン・サブボタン（色とデザインを統一） */
 .btn-primary,
 .btn-secondary {
   display: block;
